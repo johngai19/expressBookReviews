@@ -7,8 +7,13 @@ const axios = require('axios');
 
 //Task-6
 public_users.post("/register", (req,res) => {
-  const username = req.query.username;
-  const password = req.query.password;
+  //modify following code to get username and password from request body
+  const username = req.body.username;
+  const password = req.body.password;
+  
+  // const username = req.query.username;
+  // const password = req.query.password;
+
 
   if (username && password) {
     if (!isValid(username)) { 

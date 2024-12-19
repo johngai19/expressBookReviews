@@ -30,6 +30,9 @@ const authenticatedUser = (username,password)=>{ //returns boolean
 //Task-7
 //only registered users can login
 regd_users.post("/login", (req,res) => {
+  //modify following code to get username and password from request body
+  // const username = req.body.username;
+  // const password = req.body.password;
   const username = req.query.username;
   const password = req.query.password;
 
